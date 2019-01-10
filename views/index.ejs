@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="/js/script.js"></script>
+
+    <title>Quoting Dojo</title>
+</head>
+
+<body>
+    <main id=grid_container>
+
+        <h1>Welcome to Quoting Dojo</h1>
+
+        <form id="quote_form" action="/quotes" method="POST" class="form-group">
+            <label id="label_name" for="name">Your name:</label>
+            <% if(messages.registration) { %>
+                <span id="nameError"><%= messages.registration[0] %></span>
+            <% } %>
+            <input type="text" class="form-control" name="name" id="name" />
+            
+
+            <label id="label_quote" for="quote">Your quote:</label>
+            <% if(messages.registration) { %>
+                <span id="contentError"><%= messages.registration[1] %></span>
+            <% } %>
+            <textarea class="form-control" name="content" id="content"></textarea>
+
+            <button id="submitbtn" type="submit" class="btn btn-success">Add my quote!</button>
+            <a href="/quotes" id="skip_quotes" class="btn btn-primary">Skip to quotes!</a>
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+</body>
+
+</html>
